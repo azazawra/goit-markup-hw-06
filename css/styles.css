@@ -24,11 +24,35 @@ ul, ol {list-style: none;
 a {text-decoration: none;}
 /*font-family: "Raleway",sans-serif;*/
 
+/* mobile ver  */
 .container{
-    width: 1158px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding:  16px;
+    min-width: 320px;
+    max-width: 375px;
+ .nav-list {}
 }
+
+/* for pad */
+@media screen and (min-width:768px) { 
+    .container {
+        max-width: 768px;
+        padding:  16px;
+        
+    }
+    
+}
+/* for decktop */
+@media screen and (min-width:1400) {
+    .container {
+     max-width: 1400px;
+    padding:  24px;
+        }
+
+}
+
+
+
 
 /*----------------------------------------------HEADER -----------------------------------------------------------*/
 .page-header {
@@ -54,6 +78,24 @@ a {text-decoration: none;}
 .logo {
     color: #404bbf}
 
+
+.burger-button{
+    background-color: transparent;
+    border:none;
+    padding-left: 149px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+@media screen and (min-width:768px) {
+.burger-button {
+    display: none;}
+}
+
+.burger-icon{
+
+}
+
+
 .header-logo {
     margin-right: 76px;
     font-weight: 700;
@@ -64,18 +106,50 @@ a {text-decoration: none;}
     color: #4d5ae5;
     font-family: "Raleway", sans-serif;
     position: relative;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 16px;
 }
+
+@media screen and (min-width:768px) {
+.header-logo {
+    margin-right: 76px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+    font-family: "Raleway", sans-serif;
+    position: relative;
+
+
+
+}
+}
+
 
 .logoheader-part {
        color: #2e2f42;}
 
 .nav-list {
-    display: flex;
-    gap: 40px;
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
+    display: none;
 }
+
+
+@media screen and (min-width:768px) {
+    .nav-list {
+    display: flex;
+    gap: 40px;
+   padding-left: 120px;
+   padding-right: 122px;
+}   
+}
+
 
 .nav-link {
     display: block;
@@ -131,13 +205,39 @@ a {text-decoration: none;}
         }
 
 .contacts-list {
-    display: flex;
+    display: none;
     font-style: normal;
-    gap: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
+    
 }
+@media screen and (min-width:768px) {
+.contacts-list {
+        display: flex;
+        flex-wrap:wrap;
+        gap: 40px;
+        font-style: normal;
+        list-style: none;
+        padding-top: 16px;
+        margin-right: 16px ;
+        row-gap: 12px;
+        
+            }
+}
+
+@media screen and (min-width:1400px) {
+    .contacts-list {
+        display: flex;
+        gap: 40px;
+        font-style: normal;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
 
 .contacts-link {
     font-size: 16px;
